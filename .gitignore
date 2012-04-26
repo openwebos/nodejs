@@ -1,0 +1,16 @@
+# Use of this file is subject to license terms as set forth in the LICENSE file found in the root directory of the project.
+BUILD*
+build*
+.waf*
+tags
+.lock-wscript
+*.pyc
+doc/api.xml
+tools/nodejs.pc
+tmp/
+node
+node_g
+*.swp
+.benchmark_reports
+/.project
+/.cproject
