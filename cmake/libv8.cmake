@@ -20,6 +20,6 @@ else()
       ## See CMake's install(DIRECTORY) manual for details
       ${V8_INCLUDE_DIR}/
 
-      DESTINATION include/node
+      DESTINATION include/node/v8
   )
 endif()

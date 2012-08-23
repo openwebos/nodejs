@@ -1,9 +1,10 @@
 version=@VERSION@
 prefix=@PREFIX@
 libdir=${prefix}/lib
-includedir=${prefix}/include/node
+includedir=${prefix}/include
 
 Name: nodejs
 Description: Evented I/O for V8 JavaScript.
 Version: ${version}
-Cflags: -I${includedir}
+# Must include the subdirectories here as none of the #include-s in headers have them.
+Cflags: -I${includedir}/node -I${includedir}/node/v8 -I${includedir}/node/libev -I${includedir}/node/libeio @CPPFLAGS@
