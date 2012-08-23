@@ -46,7 +46,7 @@ You can install it elsewhere by supplying a value for _CMAKE\_INSTALL\_PREFIX_ w
     
 will install the files in subdirectories of $HOME/projects/openwebos instead of subdirectories of /usr/local. 
 
-Specifying _CMAKE\_INSTALL\_PREFIX_ also causes the pkg-config files under it to be used to find headers and libraries. To have _pkg-config_ look in a different tree, set the environment variable PKG_CONFIG_PATH to the path to its _lib/pkgconfig_ subdirectory.
+Specifying _CMAKE\_INSTALL\_PREFIX_ also causes the pkg-config files under it to be used to find headers and libraries. To have _pkg-config_ look in a different tree, set the environment variable _PKG\_CONFIG\_PATH_ to the path to its _lib/pkgconfig_ subdirectory.
 
 To compile with -Wall, configure for debug:
 
