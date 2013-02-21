@@ -42,13 +42,17 @@ if(NOT SHARED_V8)
     set(parallel_jobs 1)
   endif()
 
+  if(DEFINED ENV{ICECC_CC})
+    set(importenv importenv=ICECC_CC,ICECC_CXX,ICECC_VERSION,CCACHE_PATH)
+  endif()
+
   add_library(v8 STATIC IMPORTED)
   set_property(TARGET v8
     PROPERTY IMPORTED_LOCATION ${PROJECT_BINARY_DIR}/deps/v8/${v8_fn})
 
   set(compile_env_vars  "CC=${CMAKE_C_COMPILER} CXX=${CMAKE_CXX_COMPILER} AR=${CMAKE_AR} RANLIB=${CMAKE_RANLIB} CFLAGS=\"${CMAKE_C_FLAGS}\" CXXFLAGS=\"${CMAKE_CXX_FLAGS}\" LDFLAGS=\"${CMAKE_EXE_LINKER_FLAGS}\"")
 
-  set(compile_cmd "${compile_env_vars} ${PYTHON_EXECUTABLE} ${PROJECT_BINARY_DIR}/tools/scons/scons.py -j ${parallel_jobs} visibility=default mode=${v8mode} arch=${v8arch} library=static ${v8_snapshot} ${v8_oprofile} ${v8_gdbjit} verbose=on")
+  set(compile_cmd "${compile_env_vars} ${PYTHON_EXECUTABLE} ${PROJECT_BINARY_DIR}/tools/scons/scons.py -j ${parallel_jobs} visibility=default mode=${v8mode} arch=${v8arch} library=static ${v8_snapshot} ${v8_oprofile} ${v8_gdbjit} verbose=on ${importenv}")
 
 
   if(CMAKE_VERSION VERSION_GREATER 2.8 OR CMAKE_VERSION VERSION_EQUAL 2.8)
