@@ -4,7 +4,7 @@
  * Copyright (c) 2007,2008,2009,2010,2011 Marc Alexander Lehmann <libev@schmorp.de>
  * All rights reserved.
  *
- * Copyright (c) 2011 Hewlett-Packard Development Company, L.P.
+ * Copyright (c) 2011-2013 LG Electronics, Inc.
  *
  * Redistribution and use in source and binary forms, with or without modifica-
  * tion, are permitted provided that the following conditions are met:

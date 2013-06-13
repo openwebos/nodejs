@@ -1,4 +1,5 @@
-// Copyright (c) 2012 Hewlett-Packard Development Company, L.P.
+// Copyright Joyent, Inc. and other Node contributors.
+// Copyright (c) 2012-2013 LG Electronics, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
 // copy of this software and associated documentation files (the

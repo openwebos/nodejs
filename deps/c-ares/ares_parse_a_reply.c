@@ -1,6 +1,6 @@
 
 /* Copyright 1998 by the Massachusetts Institute of Technology.
- * Copyright (c) 2011 Hewlett-Packard Development Company, L.P.
+ * Copyright (c) 2011-2013 LG Electronics, Inc.
  *
  * Permission to use, copy, modify, and distribute this
  * software and its documentation for any purpose and without
